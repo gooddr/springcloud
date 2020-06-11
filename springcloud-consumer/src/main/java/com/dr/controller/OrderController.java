@@ -19,7 +19,7 @@ public class OrderController {
 
     @RequestMapping("getUser")
     public ResponseEntity<String> getUser(String userName){
-        return restTemplate.getForEntity("http://provide-server/springboot/getUserByGet?userName=" + userName, String.class);
+        return restTemplate.getForEntity("http://provider-server/orderList?userName=" + userName, String.class);
     }
 
     @RequestMapping("getUserByFeign")
