@@ -1,14 +1,14 @@
-package com.dr.provide;
+package com.dr;
 
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
-@EnableEurekaClient
 @SpringBootApplication
-public class ProvideServerMain {
+@EnableEurekaClient
+public class ConsumerServerMain {
     public static void main(String[] args) {
-        SpringApplication.run(ProvideServerMain.class, args);
+        SpringApplication.run(ConsumerServerMain.class, args);
     }
 }
