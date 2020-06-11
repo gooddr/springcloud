@@ -3,10 +3,11 @@ eureka:
     serviceUrl:
       #      eureka的注册中心地址
       defaultZone: http://localhost:8888/eureka/
-server:
+  #服务端要多次启动，所以使用输入port的模式
+  #server:
   #  此项目端口号
-  port: 8887
+#  port: 8886
 spring:
   application:
     #    注册进eureka的名字
-    name: provide-server
+    name: provider-server

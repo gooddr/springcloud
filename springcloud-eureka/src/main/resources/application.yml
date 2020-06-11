@@ -3,8 +3,12 @@ server:
 eureka:
   instance:
     hostname: localhost
+    #将来注册到注册中心的微服务，包括注册中心都是用ip地址
+    prefer-ip-address: true
   client:
+    #是否注册到注册中心，自己本来就是注册中心，也就没必要注册了，用在微服务上
     registerWithEureka: false
+    #是否抓取注册中心的注册信息，用在客户端
     fetchRegistry: false
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
